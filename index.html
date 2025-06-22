@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reproductor Musica</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <section class="reproductor">
+      <h1>Titulo</h1>
+      <p>Nombre</p>
+      <audio id="cancion">
+        <source src="" type="audio/mpeg" />
+      </audio>
+      <input type="range" value="0" id="progreso" />
+      <!-- Seccion de Botones -->
+      <div class="controles">
+        <button class="btnAtras">
+          <i class="bi bi-rewind-fill"></i>
+        </button>
+        <button class="btnReproducir">
+          <i class="bi bi-play-fill"></i>
+        </button>
+        <button class="btnSiguiente">
+          <i class="bi bi-fast-forward-fill" id="iconoControl"></i>
+        </button>
+      </div>
+    </section>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
