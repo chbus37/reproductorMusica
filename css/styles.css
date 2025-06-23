@@ -1,1 +1,123 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+
+:root {
+  --blanco: rgba(228, 228, 228, 1);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: url(../img/BackGround.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+body > * {
+  position: relative;
+  z-index: 2;
+}
+
+.reproductor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  color: var(--blanco);
+  width: 400px;
+  padding: 10px 30px;
+  border-radius: 20px;
+  background-color: rgba(228, 228, 228, 0.2);
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 5px rgb(49, 49, 49);
+}
+
+.reproductor h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.reproductor p {
+  font-size: 1rem;
+  font-weight: 400;
+  opacity: 0.6;
+}
+
+#progreso {
+  appearance: none;
+  width: 100%;
+  height: 7px;
+  background: rgba(165, 165, 165, 0.4);
+  border-radius: 4px;
+  margin: 32px 0 24px;
+  cursor: pointer;
+}
+/* Para darle estilos al circulito de la barra de progreso */
+#progreso::-webkit-slider-thumb {
+  appearance: none;
+  background: rgba(165, 165, 165, 0.9);
+  width: 16px;
+  aspect-ratio: 1/1;
+  outline: 4px solid var(--blanco);
+  box-shadow: 0 6px 10px rgba(228, 228, 228, 0.3);
+}
+
+.controles {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.controles button {
+  width: 50px;
+  aspect-ratio: 1/1;
+  background: rgba(165, 165, 165, 0.3);
+  border-radius: 50%;
+  color: var(--blanco);
+  outline: none;
+  border: 1px solid var(--blanco);
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 6px 10px rgba(228, 228, 228, 0.3);
+  transition: all 300ms ease-in-out;
+}
+
+.controles .iconoControl {
+  transform: scale(1.3);
+}
+
+.controles .control:hover {
+  transform: scale(1.1);
+}
+
+.controles .iconoControl:hover {
+  transform: scale(1.2);
+}
